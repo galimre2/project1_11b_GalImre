@@ -1,0 +1,28 @@
+﻿<Window x:Class="Projekt_GalImre.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projekt_GalImre"
+        mc:Ignorable="d"
+        Title="Feladatok nyilvántartása" Name="ablak" Height="440" Width="650" ResizeMode="NoResize">
+    <Grid Margin="0,0,22,0">
+        <Label Content="Gál Imre @ 2021" HorizontalAlignment="Left" Margin="477,371,0,0" VerticalAlignment="Top"/>
+
+        <Label Content="Feladatok listája" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top"/>
+        <ListBox Width="400" HorizontalAlignment="Left" Margin="10,61,0,0" x:Name="feladatokListaja" Height="200" VerticalAlignment="Top" SelectionChanged="feladatokListaja_SelectionChanged"/>
+
+        <Label Content="Törölt feladatok" HorizontalAlignment="Left" Margin="10,266,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="toroltekListaja" Height="100" Margin="10,297,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="400"/>
+
+        <Label Content="Feladat szövege:" HorizontalAlignment="Left" Margin="415,30,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="415,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Name="feladatNeve"/>
+
+        <Button Content="Új hozzáadása" x:Name="hozzaadasGomb" HorizontalAlignment="Left" Margin="415,84,0,0" VerticalAlignment="Top" Width="160" Click="hozzaadasGomb_Click"/>
+        <Button Content="Kijelölt feladat módosítása" x:Name="modositasGomb" HorizontalAlignment="Left" Margin="415,109,0,0" VerticalAlignment="Top" Width="160" Click="modositasGomb_Click"/>
+        <Button Content="Kijelölt feladat törlése" x:Name="athelyezesGomb" HorizontalAlignment="Left" Margin="415,134,0,0" VerticalAlignment="Top" Width="160" Click="athelyezesGomb_Click"/>
+
+        <Button Content="Kijelölt feladat visszaállítása" x:Name="visszaalitasGomb" HorizontalAlignment="Left" Margin="415,297,0,0" VerticalAlignment="Top" Width="160" Click="visszaalitasGomb_Click"/>
+        <Button Content="Kijelölt feladat végleg törlése" x:Name="torlesGomb" HorizontalAlignment="Left" Margin="415,322,0,0" VerticalAlignment="Top" Width="160" Click="torlesGomb_Click"/>
+    </Grid>
+</Window>
